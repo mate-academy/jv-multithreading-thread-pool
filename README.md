@@ -1,7 +1,8 @@
 # Thread pool
 
 Create in `main()` method an `ExecutorService` instance with a fixed-sized thread pool for 5 threads.
-Then add 20 threads of type `MyThread` to your `ExecutorService`.
+Then add 20 threads of type `MyThread` to your `ExecutorService`. 
+Let's add `Future` objects that we receive to the `futures` list.
 
 Your threads should return a `String` in the following format:
 ```Task duration was 200 ms, execution finished at 11:27:47.243785```
@@ -10,7 +11,7 @@ Task duration means that your thread should actually be suspended for this perio
 You can randomly generate task duration for each thread and use `LocalTime.now()` 
 to get the time when this thread finishes execution. 
 
-After your task is executed, log the result string in `main()` method.
+After all your tasks are executed, in `main()` method log the result string from each `Future` in `futures` list.
 
 Note that you should push the file with logs to your PR, so please, do not add it to `.gitignore`.
 You may probably need to use the absolute path to the log file in `log4j2.xml`.
