@@ -18,24 +18,24 @@ You may probably need to use the absolute path to the log file in `log4j2.xml`.
 
 Logs example:
 ```
-INFO core.basesyntax.Main:18 Task duration was 200 ms, execution finished at 11:27:47.243785
-INFO core.basesyntax.Main:18 Task duration was 100 ms, execution finished at 11:27:47.358773
-INFO core.basesyntax.Main:18 Task duration was 200 ms, execution finished at 11:27:47.562603
-INFO core.basesyntax.Main:18 Task duration was 300 ms, execution finished at 11:27:47.865479
-INFO core.basesyntax.Main:18 Task duration was 500 ms, execution finished at 11:27:48.367833
-INFO core.basesyntax.Main:18 Task duration was 100 ms, execution finished at 11:27:48.470337
-INFO core.basesyntax.Main:18 Task duration was 100 ms, execution finished at 11:27:48.574946
-INFO core.basesyntax.Main:18 Task duration was 100 ms, execution finished at 11:27:48.677488
-INFO core.basesyntax.Main:18 Task duration was 500 ms, execution finished at 11:27:49.181528
-INFO core.basesyntax.Main:18 Task duration was 200 ms, execution finished at 11:27:49.391357
-INFO core.basesyntax.Main:18 Task duration was 400 ms, execution finished at 11:27:49.796201
-INFO core.basesyntax.Main:18 Task duration was 400 ms, execution finished at 11:27:50.197847
-INFO core.basesyntax.Main:18 Task duration was 300 ms, execution finished at 11:27:50.500033
-INFO core.basesyntax.Main:18 Task duration was 400 ms, execution finished at 11:27:50.901827
-INFO core.basesyntax.Main:18 Task duration was 400 ms, execution finished at 11:27:51.303852
-INFO core.basesyntax.Main:18 Task duration was 500 ms, execution finished at 11:27:51.807451
-INFO core.basesyntax.Main:18 Task duration was 500 ms, execution finished at 11:27:52.310309
-INFO core.basesyntax.Main:18 Task duration was 100 ms, execution finished at 11:27:52.412642
-INFO core.basesyntax.Main:18 Task duration was 100 ms, execution finished at 11:27:52.519061
-INFO core.basesyntax.Main:18 Task duration was 200 ms, execution finished at 11:27:52.722007
+INFO core.basesyntax.Main:24 Task duration was 200 ms, execution finished at 11:27:47.243785
+INFO core.basesyntax.Main:24 Task duration was 100 ms, execution finished at 11:27:47.358773
+INFO core.basesyntax.Main:24 Task duration was 200 ms, execution finished at 11:27:47.562603
+INFO core.basesyntax.Main:24 Task duration was 300 ms, execution finished at 11:27:47.865479
+INFO core.basesyntax.Main:24 Task duration was 500 ms, execution finished at 11:27:48.367833
+INFO core.basesyntax.Main:24 Task duration was 100 ms, execution finished at 11:27:48.470337
+INFO core.basesyntax.Main:24 Task duration was 100 ms, execution finished at 11:27:48.574946
+INFO core.basesyntax.Main:24 Task duration was 100 ms, execution finished at 11:27:48.677488
+INFO core.basesyntax.Main:24 Task duration was 500 ms, execution finished at 11:27:49.181528
+INFO core.basesyntax.Main:24 Task duration was 200 ms, execution finished at 11:27:49.391357
+INFO core.basesyntax.Main:24 Task duration was 400 ms, execution finished at 11:27:49.796201
+INFO core.basesyntax.Main:24 Task duration was 400 ms, execution finished at 11:27:50.197847
+INFO core.basesyntax.Main:24 Task duration was 300 ms, execution finished at 11:27:50.500033
+INFO core.basesyntax.Main:24 Task duration was 400 ms, execution finished at 11:27:50.901827
+INFO core.basesyntax.Main:24 Task duration was 400 ms, execution finished at 11:27:51.303852
+INFO core.basesyntax.Main:24 Task duration was 500 ms, execution finished at 11:27:51.807451
+INFO core.basesyntax.Main:24 Task duration was 500 ms, execution finished at 11:27:52.310309
+INFO core.basesyntax.Main:24 Task duration was 100 ms, execution finished at 11:27:52.412642
+INFO core.basesyntax.Main:24 Task duration was 100 ms, execution finished at 11:27:52.519061
+INFO core.basesyntax.Main:24 Task duration was 200 ms, execution finished at 11:27:52.722007
 ```
