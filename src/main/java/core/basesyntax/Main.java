@@ -19,6 +19,7 @@ public class Main {
         for (int i = 0; i < 20; i++) {
             futures.add(executorService.submit(myCallableThread));
         }
+        executorService.shutdown();
         for (Future<String> future : futures) {
             try {
                 logger.info(future.get());
