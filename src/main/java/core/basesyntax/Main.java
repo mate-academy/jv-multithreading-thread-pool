@@ -25,7 +25,7 @@ public class Main {
             try {
                 logger.info(future.get());
             } catch (InterruptedException | ExecutionException e) {
-                throw new RuntimeException("Can't get Future object", e);
+                throw new RuntimeException("Can't get Future object.", e);
             }
         }
     }
