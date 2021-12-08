@@ -5,13 +5,14 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
-    private int duration = new Random().nextInt(100);
+    private static ThreadLocal<Integer> duration = new ThreadLocal<>();
 
     @Override
     public String call() throws InterruptedException {
-        Thread.sleep(duration);
+        duration.set(new Random().nextInt(100));
+        Thread.sleep(duration.get());
         return "Task duration was "
-                + duration
+                + duration.get()
                 + " ms, execution finished at "
                 + LocalDateTime.now();
     }
