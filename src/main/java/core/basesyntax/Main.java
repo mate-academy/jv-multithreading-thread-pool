@@ -12,12 +12,13 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
+    private static final int MAX_THREAD_COUNT = 20;
 
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(5);
         Callable<String> task = new MyThread();
         List<Future<String>> futures = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < MAX_THREAD_COUNT; i++) {
             futures.add(executorService.submit(task));
         }
         executorService.shutdown();
