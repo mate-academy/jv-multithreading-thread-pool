@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INFO core.basesyntax.Main:28 Task duration was 300 ms, execution finished at 14:49:09.973650900
 INFO core.basesyntax.Main:28 Task duration was 300 ms, execution finished at 14:49:09.973650900
 INFO core.basesyntax.Main:28 Task duration was 300 ms, execution finished at 14:49:09.973650900
@@ -18,3 +19,25 @@ INFO core.basesyntax.Main:28 Task duration was 300 ms, execution finished at 14:
 INFO core.basesyntax.Main:28 Task duration was 400 ms, execution finished at 14:49:10.887582700
 INFO core.basesyntax.Main:28 Task duration was 400 ms, execution finished at 14:49:11.129067
 INFO core.basesyntax.Main:28 Task duration was 200 ms, execution finished at 14:49:11.004060600
+=======
+INFO core.basesyntax.Main:27 Task duration was 400 ms, execution finished at 14:43:43.358255900
+INFO core.basesyntax.Main:27 Task duration was 400 ms, execution finished at 14:43:43.358255900
+INFO core.basesyntax.Main:27 Task duration was 200 ms, execution finished at 14:43:43.155107700
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.045731900
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.045731900
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.170734700
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.170734700
+INFO core.basesyntax.Main:27 Task duration was 400 ms, execution finished at 14:43:43.561564700
+INFO core.basesyntax.Main:27 Task duration was 200 ms, execution finished at 14:43:43.374280
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.280103500
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.389501400
+INFO core.basesyntax.Main:27 Task duration was 200 ms, execution finished at 14:43:43.561564700
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.467627
+INFO core.basesyntax.Main:27 Task duration was 200 ms, execution finished at 14:43:43.577187900
+INFO core.basesyntax.Main:27 Task duration was 500 ms, execution finished at 14:43:43.889506600
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.577187900
+INFO core.basesyntax.Main:27 Task duration was 500 ms, execution finished at 14:43:44.087071300
+INFO core.basesyntax.Main:27 Task duration was 300 ms, execution finished at 14:43:43.873883800
+INFO core.basesyntax.Main:27 Task duration was 100 ms, execution finished at 14:43:43.686352
+INFO core.basesyntax.Main:27 Task duration was 400 ms, execution finished at 14:43:43.983252300
+>>>>>>> origin/jv-thread-pool
