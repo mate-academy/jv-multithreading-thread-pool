@@ -12,12 +12,15 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
+    private static final int EXECUTOR_SERVICE_THREADS_NUMBER = 5;
+    private static final int MYTHREAD_THREADS_NUMBER = 20;
 
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        ExecutorService executorService =
+                Executors.newFixedThreadPool(EXECUTOR_SERVICE_THREADS_NUMBER);
         Callable<String> task = new MyThread();
         List<Future<String>> futures = new ArrayList<>();
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 0; i <= MYTHREAD_THREADS_NUMBER; i++) {
             futures.add(executorService.submit(task));
         }
         executorService.shutdown();
