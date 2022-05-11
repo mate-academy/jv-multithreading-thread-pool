@@ -2,9 +2,9 @@
 <Configuration status="info">
     <Appenders>
         <Console name="LogToConsole" target="SYSTEM_OUT">
-            <PatternLayout pattern="%-5level %c:%L - %msg%n"/>
+            <PatternLayout pattern="%-5level %c:%L %msg%n"/>
         </Console>
-        <File name="LogToFile" filename="logs/app.log" append="false">
+        <File name="LogToFile" filename="C:\Users\user\IdeaProjects\jv-multithreading-thread-pool\logs\app.log" append="false">
             <PatternLayout><Pattern>%p %c:%L %m%n</Pattern></PatternLayout>
         </File>
     </Appenders>
