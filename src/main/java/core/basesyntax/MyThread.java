@@ -13,6 +13,7 @@ public class MyThread implements Callable<String> {
         synchronized (this) {
             wait(duration[index]);
         }
-        return "Task duration was " + duration[index] + " ms, execution finished at " +  LocalTime.now().toString();
+        return "Task duration was " + duration[index]
+                + " ms, execution finished at " + LocalTime.now().toString();
     }
 }
