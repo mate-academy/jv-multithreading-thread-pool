@@ -6,7 +6,7 @@ import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
     @Override
-    public String call() {
+    public String call() throws InterruptedException {
         return "Task duration was " + new Random().nextInt(200) + " ms, execution finished at "
                 + LocalDateTime.now();
     }
