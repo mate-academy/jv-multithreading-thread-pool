@@ -8,6 +8,7 @@ import java.util.concurrent.Callable;
 public class MyThread implements Callable<String> {
     private static final DateTimeFormatter TIME_FORMATTER =
             DateTimeFormatter.ofPattern("HH:mm:ss.SSSSSS");
+
     @Override
     public String call() throws InterruptedException {
         long suspendPeriod = 100 + new Random().nextInt(900);
