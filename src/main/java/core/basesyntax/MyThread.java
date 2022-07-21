@@ -7,7 +7,8 @@ public class MyThread implements Callable<String> {
     @Override
     public String call() throws InterruptedException {
         Thread.sleep(100);
-        return "Task duration was 200 ms, " +
-                "execution finished at " + LocalTime.now();
+        return "Task duration was 200 ms, "
+                + "execution finished at "
+                + LocalTime.now();
     }
 }
