@@ -10,6 +10,9 @@ public class MyThread implements Callable<String> {
     public String call() throws InterruptedException {
         int duration = new Random().nextInt(5) * 100;
         return String.format("Task duration was %d ms,"
-                + " execution finished at %s", duration, LocalTime.parse(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss.SSS"))));
+                + " execution finished at %s", duration,
+                LocalTime.parse(LocalTime.now()
+                        .format(DateTimeFormatter
+                                .ofPattern("HH:mm:ss.SSS"))));
     }
 }
