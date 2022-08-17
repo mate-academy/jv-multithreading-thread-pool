@@ -24,7 +24,7 @@ public class Main {
         try {
             for (Future<String> future : futures) {
                 String s = future.get();
-                System.out.println(s);
+                logger.info(s);
             }
         } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException("sss");
