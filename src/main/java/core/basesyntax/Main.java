@@ -26,6 +26,7 @@ public class Main {
                         logger.info(f.get());
                     } catch (InterruptedException | ExecutionException e) {
                         throw new RuntimeException(e);
-                    }});
+                    }
+                });
     }
 }
