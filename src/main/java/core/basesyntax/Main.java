@@ -24,7 +24,7 @@ public class Main {
             try {
                 logger.info(future.get());
             } catch (InterruptedException | ExecutionException e) {
-                throw new RuntimeException("Something was wrong!", e);
+                throw new RuntimeException("Something was wrong", e);
             }
         }
     }
