@@ -21,7 +21,7 @@ public class Main {
         for (Future<String> future : futures) {
             try {
                 logger.info(future.get());
-            } catch (InterruptedException | ExecutionException e) {
+            } catch (ExecutionException | InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
