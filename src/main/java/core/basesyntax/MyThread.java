@@ -11,6 +11,7 @@ public class MyThread implements Callable<String> {
     public String call() throws Exception {
         int time = (int) (START_RANGE_MS + Math.random() * END_RANGE_MS);
         Thread.sleep(time);
-        return String.format("Task duration was %s ms, execution finished at %s", time, LocalTime.now());
+        return String.format("Task duration was %s ms, execution finished at %s",
+                time, LocalTime.now());
     }
 }
