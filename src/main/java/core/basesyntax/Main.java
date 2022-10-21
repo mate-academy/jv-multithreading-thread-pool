@@ -2,6 +2,7 @@ package core.basesyntax;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -18,6 +19,12 @@ public class Main {
             futures.add(executorService.submit(new MyThread()));
         }
         executorService.shutdown();
-        // write your code here
+        for (Future<String> future : futures) {
+            try {
+                logger.info(future.get());
+            } catch (InterruptedException | ExecutionException e) {
+                throw new RuntimeException("Exception while reading from Future list", e);
+            }
+        }
     }
 }
