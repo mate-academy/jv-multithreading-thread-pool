@@ -14,7 +14,8 @@ public class Main {
     private static final int sizeOfThreadPoll = 5;
     private static final Logger logger = LogManager.getLogger(Main.class);
 
-    public static void main(String[] args) {List<Future<String>> futures = new ArrayList<>();
+    public static void main(String[] args) {
+        List<Future<String>> futures = new ArrayList<>();
         ExecutorService executorService = Executors.newFixedThreadPool(sizeOfThreadPoll);
         for (int i = 0; i < countOfThreads; i++) {
             futures.add(executorService.submit(new MyThread()));
