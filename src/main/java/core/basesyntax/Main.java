@@ -11,7 +11,6 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
-
     private static final int LEN = 20;
 
     public static void main(String[] args) {
@@ -21,8 +20,10 @@ public class Main {
         for (int i = 0; i < LEN; i++) {
             futures.add(executorService.submit(new MyThread()));
         }
+        executorService.shutdown();
         for (Future<String> future: futures) {
             try {
+                logger.info(future.get());
                 System.out.println(future.get());
             } catch (InterruptedException | ExecutionException e) {
                 throw new RuntimeException(e);
