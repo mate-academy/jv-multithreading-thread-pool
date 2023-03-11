@@ -8,6 +8,7 @@ public class MyThread implements Callable<String> {
     public String call() throws InterruptedException {
         long start = System.nanoTime();
         long end = System.nanoTime();
-        return "Task duration was " + (end - start) + " ms, execution finished at " + LocalTime.now();
+        return "Task duration was " + (end - start)
+                + " ms, execution finished at " + LocalTime.now();
     }
 }
