@@ -7,8 +7,9 @@ import java.util.concurrent.Callable;
 public class MyThread implements Callable<String> {
     @Override
     public String call() throws InterruptedException {
-        String result = "Task duration was " + new Random().nextInt(500) + "ms, "
+        int taskDuration = new Random().nextInt(500);
+        Thread.sleep(taskDuration);
+        return "Task duration was " + taskDuration + "ms, "
                 + "execution finished at " + LocalTime.now();
-        return result;
     }
 }
