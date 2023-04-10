@@ -8,8 +8,7 @@ public class MyThread implements Callable<String> {
     public String call() throws InterruptedException {
         // write your code here
         System.currentTimeMillis();
-        return "Task duration was ms " +
-                System.currentTimeMillis()
+        return "Task duration was ms " + System.currentTimeMillis()
                 + ", execution finished at " + LocalDateTime.now();
     }
 }
