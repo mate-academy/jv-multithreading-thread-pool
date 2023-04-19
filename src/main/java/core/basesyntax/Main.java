@@ -6,7 +6,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +16,7 @@ public class Main {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         List<Future<String>> futures = new ArrayList<>();
         ExecutorService executorService = Executors.newFixedThreadPool(5);
-        for (int i = 0; i < 20; i ++) {
+        for (int i = 0; i < 20; i++) {
             Future<String> future = executorService.submit(new MyThread());
             logger.log(Level.INFO, future.get());
             futures.add(future);
