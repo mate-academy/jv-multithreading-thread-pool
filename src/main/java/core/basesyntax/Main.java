@@ -25,7 +25,7 @@ public class Main {
             try {
                 logger.info(future.get());
             } catch (ExecutionException | InterruptedException e) {
-                throw new RuntimeException("Some exceptions here", e);
+                throw new RuntimeException("Some exceptions: ", e);
             }
         }
     }
