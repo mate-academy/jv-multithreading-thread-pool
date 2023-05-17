@@ -24,7 +24,7 @@ public class Main {
             try {
                 logger.info(future.get());
             } catch (InterruptedException | ExecutionException e) {
-                throw new RuntimeException("Your code failed you!", e);
+                throw new RuntimeException("Failed!", e);
             }
         }
     }
