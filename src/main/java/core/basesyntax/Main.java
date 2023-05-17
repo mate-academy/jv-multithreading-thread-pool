@@ -23,7 +23,7 @@ public class Main {
             try {
                 logger.info(stringFuture.get());
             } catch (InterruptedException | ExecutionException e) {
-                throw new RuntimeException("Some exception was thrown", e);
+                throw new RuntimeException("Some exception was thrown!", e);
             }
         }
     }
