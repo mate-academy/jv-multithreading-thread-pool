@@ -13,7 +13,9 @@ public class MyThread implements Callable<String> {
         Thread.sleep(taskDuration);
 
         LocalTime executionTime = LocalTime.now();
-        String result = "Task duration was " + taskDuration + " ms, execution finished at " + executionTime;
+        String result = "Task duration was "
+                + taskDuration
+                + " ms, execution finished at " + executionTime;
         return result;
     }
 }
