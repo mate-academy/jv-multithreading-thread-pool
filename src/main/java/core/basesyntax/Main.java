@@ -21,7 +21,7 @@ public class Main {
             futures.add(executorService.submit(task));
         }
         executorService.shutdown();
-        for (Future<String> future : futures){
+        for (Future<String> future : futures) {
             try {
                 logger.info(future.get());
             } catch (InterruptedException | ExecutionException e) {
