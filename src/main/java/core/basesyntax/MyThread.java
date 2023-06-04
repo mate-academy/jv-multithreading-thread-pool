@@ -7,9 +7,9 @@ import java.util.concurrent.Callable;
 public class MyThread implements Callable<String> {
     @Override
     public String call() throws InterruptedException {
+        long start = System.currentTimeMillis();
         Random random = new Random();
         int randomTimePause = random.nextInt(100);
-        long start = System.currentTimeMillis();
         Thread.sleep(randomTimePause);
         LocalTime localTime = LocalTime.now();
         long finish = System.currentTimeMillis();
