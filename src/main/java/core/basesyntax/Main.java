@@ -19,7 +19,7 @@ public class Main {
         }
         executorService.shutdown();
         for (Future<String> future : futures) {
-            System.out.println(future.get());
+            System.out.println(logger.getLevel() + " " + logger.getName() + " " + future.get());
         }
     }
 }
