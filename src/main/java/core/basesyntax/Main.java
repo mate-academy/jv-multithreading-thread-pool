@@ -20,6 +20,7 @@ public class Main {
         for (int i = 0; i < 20; i++) {
             futures.add(executorService.submit(new MyThread(random)));
         }
+        executorService.shutdown();
 
         for (Future<String> future : futures) {
             try {
@@ -28,7 +29,5 @@ public class Main {
                 throw new RuntimeException(e);
             }
         }
-
-        executorService.shutdown();
     }
 }
