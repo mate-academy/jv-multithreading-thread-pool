@@ -10,6 +10,7 @@ public class MyThread implements Callable<String> {
         Random random = new Random();
         int sleepTime = random.nextInt(500);
         Thread.sleep(sleepTime);
-        return "Task duration was " + sleepTime + " ms, execution finished at " + LocalDateTime.now();
+        return "Task duration was " + sleepTime
+                + " ms, execution finished at " + LocalDateTime.now();
     }
 }
