@@ -8,6 +8,7 @@ public class MyThread implements Callable<String> {
     private static final Random random = new Random();
     private static final int min = 100;
     private static final int max = 999;
+
     @Override
     public String call() throws InterruptedException {
         int duration = random.nextInt((max - min + 1) + min);
