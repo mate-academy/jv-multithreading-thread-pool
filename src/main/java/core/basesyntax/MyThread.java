@@ -5,7 +5,8 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
-    private static String MESSAGE = "Task duration was %d ms, execution finished at %s";
+    private static final String MESSAGE = "Task duration was %d ms, execution finished at %s";
+
     @Override
     public String call() throws InterruptedException {
         int workTime = new Random().nextInt(1000);
