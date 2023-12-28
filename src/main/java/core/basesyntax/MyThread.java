@@ -6,6 +6,7 @@ import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
     private final Random random = new Random();
+
     @Override
     public String call() throws InterruptedException {
         long startTime = System.currentTimeMillis();
