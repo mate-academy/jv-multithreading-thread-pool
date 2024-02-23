@@ -19,15 +19,13 @@ public class Main {
         for (int i = 0; i < 20; i++) {
             futures.add(executorService.submit(new MyThread()));
         }
-        futures.stream()
-                .map(stringFuture -> {
-                    try {
-                        return stringFuture.get();
-                    } catch (InterruptedException | ExecutionException e) {
-                        throw new RuntimeException(e);
-                    }
-                })
-                .forEach(logger::info);
+        futures.stream().map(stringFuture -> {
+            try {
+                return stringFuture.get();
+            } catch (InterruptedException | ExecutionException e) {
+                throw new RuntimeException(e);
+            }
+        }).forEach(logger::info);
         executorService.shutdown();
     }
 }
