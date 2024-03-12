@@ -26,7 +26,7 @@ public class Main {
                 logger.info(future.get());
             } catch (InterruptedException | ExecutionException e) {
                 throw new RuntimeException(e);
-              }
+            }
         }
         executor.shutdown();
     }
