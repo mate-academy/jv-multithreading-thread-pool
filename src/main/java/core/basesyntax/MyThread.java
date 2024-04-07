@@ -8,6 +8,7 @@ public class MyThread implements Callable<String> {
     public String call() throws InterruptedException {
         int randomSleep = (int) (Math.random() * 100);
         Thread.sleep(randomSleep);
-        return String.format("Task duration was %s ms, execution finished at %s", randomSleep, LocalTime.now());
+        return String.format("Task duration was %s ms, execution finished at %s",
+                randomSleep, LocalTime.now());
     }
 }
