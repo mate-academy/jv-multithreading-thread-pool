@@ -2,6 +2,9 @@ package core.basesyntax;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,6 +14,21 @@ public class Main {
 
     public static void main(String[] args) {
         List<Future<String>> futures = new ArrayList<>();
-        // write your code here
+        try {
+            ExecutorService executorService = Executors.newFixedThreadPool(5);
+            MyThread myThread = new MyThread();
+            for (int i = 0; i < 20; i++) {
+                Future<String> future = executorService.submit(myThread);
+                futures.add(future);
+            }
+            executorService.shutdown();
+            for (Future<String> future : futures) {
+                String message = future.get();
+                logger.info(message);
+                System.out.println(message);
+            }
+        } catch (ExecutionException | InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
