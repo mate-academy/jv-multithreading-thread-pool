@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -23,7 +22,7 @@ public class Main {
         executor.shutdown();
 
         for (Future<String> future : futures) {
-            System.out.println(future.get());
+            logger.info(future.get());
         }
     }
 }
