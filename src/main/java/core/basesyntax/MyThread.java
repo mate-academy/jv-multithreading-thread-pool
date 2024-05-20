@@ -1,7 +1,7 @@
 package core.basesyntax;
 
-import java.time.*;
-import java.util.*;
+import java.time.LocalTime;
+import java.util.Random;
 import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
