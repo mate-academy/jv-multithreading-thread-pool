@@ -15,12 +15,12 @@ public class Main {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         List<Future<String>> futures = new ArrayList<>();
-        try (ExecutorService service = Executors.newFixedThreadPool(5)) {
-            for (int i = 0; i < 20; i++) {
-                Future<String> submit = service.submit(new MyThread());
-                futures.add(submit);
-            }
+        ExecutorService service = Executors.newFixedThreadPool(5);
+        for (int i = 0; i < 20; i++) {
+            Future<String> submit = service.submit(new MyThread());
+            futures.add(submit);
         }
+        service.shutdown();
         for (Future<String> future : futures) {
             logger.log(Level.INFO, future.get());
         }
