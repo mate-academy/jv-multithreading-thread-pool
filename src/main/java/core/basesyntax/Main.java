@@ -16,9 +16,9 @@ public class Main {
         List<Future<String>> futures = new ArrayList<>();
         // write your code here
         ExecutorService executorService = Executors.newFixedThreadPool(5);
-        MyThread MyThread = new MyThread();
-        for (int i=0; i < 20; i++) {
-            futures.add(executorService.submit(MyThread));
+        MyThread myThread = new MyThread();
+        for (int i = 0; i < 20; i++) {
+            futures.add(executorService.submit(myThread));
         }
         for (Future<String> future : futures) {
             try {
