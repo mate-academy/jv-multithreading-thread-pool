@@ -7,6 +7,7 @@ import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
     private static final int MAX_SLEEP_TIME = 500;
+
     @Override
     public String call() throws InterruptedException {
         LocalTime start = LocalTime.now();
