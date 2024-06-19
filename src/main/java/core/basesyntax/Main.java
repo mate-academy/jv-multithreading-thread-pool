@@ -15,18 +15,17 @@ public class Main {
     private static final int TASK_AMOUNT = 20;
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
-        try (ExecutorService executorService = Executors.newFixedThreadPool(THREAD_POOL_SIZE)) {
-            List<MyThread> tasks = new ArrayList<>();
-            for (int i = 0; i < TASK_AMOUNT; i++) {
-                tasks.add(new MyThread());
-            }
-
-            List<Future<String>> futures = executorService.invokeAll(tasks);
-            for (Future<String> task : futures) {
-                logger.info(task.get());
-            }
-
-            executorService.shutdown();
+        ExecutorService executorService = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
+        List<MyThread> tasks = new ArrayList<>();
+        for (int i = 0; i < TASK_AMOUNT; i++) {
+            tasks.add(new MyThread());
         }
+
+        List<Future<String>> futures = executorService.invokeAll(tasks);
+        for (Future<String> task : futures) {
+            logger.info(task.get());
+        }
+
+        executorService.shutdown();
     }
 }
