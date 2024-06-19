@@ -12,6 +12,7 @@ public class MyThread implements Callable<String> {
         Thread.sleep(new Random().nextInt(1000));
         LocalTime endTime = LocalTime.now();
         long duration = Duration.between(startTime, endTime).toMillis();
-        return String.format("Task duration was %d ms, execution finished at %s", duration, endTime);
+        return String.format("Task duration was %d ms, execution finished at %s",
+                duration, endTime);
     }
 }
