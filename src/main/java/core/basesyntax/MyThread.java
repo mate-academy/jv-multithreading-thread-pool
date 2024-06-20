@@ -9,6 +9,7 @@ public class MyThread implements Callable<String> {
         int taskDuration = (int) Math.round(Math.random() * 1000);
         Thread.sleep(taskDuration);
         LocalTime finishAt = LocalTime.now();
-        return String.format("Task duration was %d ms, execution finished at %s", taskDuration, finishAt);
+        return String.format("Task duration was %d ms, execution finished at %s",
+                taskDuration, finishAt);
     }
 }
