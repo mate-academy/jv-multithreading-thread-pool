@@ -15,6 +15,8 @@ public class MyThread implements Callable<String> {
 
         LocalTime endTime = LocalTime.now();
 
-        return String.format("Task duration was %d ms, execution finished at %s", taskDuration, endTime);
+        return String.format(
+                "Task duration was %d ms, execution finished at %s",
+                taskDuration, endTime);
     }
 }
