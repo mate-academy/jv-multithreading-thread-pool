@@ -1,22 +1,23 @@
 package core.basesyntax;
 
 import java.time.LocalTime;
-import java.util.Random;
 import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MyThread implements Callable<String> {
     @Override
     public String call() throws InterruptedException {
-        Random random = new Random();
-        int taskDuration = 100 + random.nextInt(401);
+        // Generate a random task duration between 100 and 500 milliseconds
+        int taskDuration = ThreadLocalRandom.current().nextInt(100, 501);
 
-        TimeUnit.MILLISECONDS.sleep(taskDuration);
+        // Suspend the thread for the generated duration
+        Thread.sleep(taskDuration);
 
-        LocalTime endTime = LocalTime.now();
+        // Get the current time when the task finishes
+        LocalTime finishTime = LocalTime.now();
 
-        return String.format(
-                "Task duration was %d ms, execution finished at %s",
-                taskDuration, endTime);
+        // Return the result string
+        return String.format("Task duration was %d ms, execution finished at %s",
+                taskDuration, finishTime);
     }
 }
