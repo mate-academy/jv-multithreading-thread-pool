@@ -22,7 +22,7 @@ public class Main {
         futures.addAll(executorService.invokeAll(threads));
         executorService.shutdown();
         for (Future<String> future : futures) {
-            logger.info(future.get());;
+            logger.info(future.get());
         }
     }
 }
