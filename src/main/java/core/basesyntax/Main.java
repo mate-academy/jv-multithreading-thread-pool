@@ -23,7 +23,7 @@ public class Main {
         executorService.shutdown();
         for (Future<String> future : futures) {
             try {
-                System.out.println(future.get());
+                logger.info(future.get());
             } catch (InterruptedException | ExecutionException e) {
                 throw new RuntimeException(e);
             }
