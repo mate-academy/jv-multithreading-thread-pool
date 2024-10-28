@@ -16,7 +16,9 @@ public class Main {
 
     public static void main(String[] args) {
         List<Future<String>> futures = new ArrayList<>();
-        try (ExecutorService executorService = Executors.newFixedThreadPool(THREADS_NUMBER)) {
+        ExecutorService executorService = null;
+        try {
+            executorService = Executors.newFixedThreadPool(THREADS_NUMBER);
             for (int i = 0; i < NUMBER_OF_EXECUTIONS; i++) {
                 futures.add(executorService.submit(new MyThread()));
             }
@@ -26,6 +28,10 @@ public class Main {
             }
         } catch (ExecutionException | InterruptedException e) {
             throw new RuntimeException("Error while executing threads", e);
+        } finally {
+            if (executorService != null) {
+                executorService.shutdown();
+            }
         }
     }
 }

@@ -10,9 +10,10 @@ public class MyThread implements Callable<String> {
 
     @Override
     public String call() throws InterruptedException {
-        Thread.sleep(random.nextInt(RANDOM_BOUND));
+        int delay = random.nextInt(RANDOM_BOUND);
+        Thread.sleep(delay);
         return String.format("Task duration was %s ms, execution finished at %s%n",
-                RANDOM_BOUND,
+                delay,
                 LocalTime.now());
     }
 }
