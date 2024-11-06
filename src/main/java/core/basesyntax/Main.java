@@ -15,7 +15,8 @@ public class Main {
     public static void main(String[] args) {
         List<Future<String>> futures = new ArrayList<>();
         MyThread myCallableThread = new MyThread();
-        try (ExecutorService executorService = Executors.newCachedThreadPool()) {
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        try {
             for (int i = 0; i < 20; i++) {
                 futures.add(executorService.submit(myCallableThread));
             }
@@ -23,9 +24,10 @@ public class Main {
             for (Future<String> future : futures) {
                 logger.info(future.get());
             }
-            executorService.shutdown();
         } catch (ExecutionException | InterruptedException e) {
             throw new RuntimeException(e);
+        } finally {
+            executorService.shutdown();
         }
     }
 }

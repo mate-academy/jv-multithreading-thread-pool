@@ -10,7 +10,7 @@ public class MyThread implements Callable<String> {
     @Override
     public String call() throws InterruptedException {
         int randomExecutionTime = (random.nextInt(9) + 1) * 100;
-        Thread.sleep(200);
+        Thread.sleep(randomExecutionTime);
         return "Task duration was" + randomExecutionTime
                 + " ms, execution finished at " + LocalDateTime.now();
     }
