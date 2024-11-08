@@ -1,11 +1,16 @@
 package core.basesyntax;
 
+import java.time.LocalTime;
+import java.util.Random;
 import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
     @Override
     public String call() throws InterruptedException {
-        // write your code here
-        return null;
+        int time = (new Random().nextInt(4) + 1) * 100;
+        Thread.sleep(time);
+        return String.format(
+                "Task duration was %d ms, execution finished at %s", time, LocalTime.now()
+        );
     }
 }
