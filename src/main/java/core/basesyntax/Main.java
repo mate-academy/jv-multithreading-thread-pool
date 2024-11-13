@@ -27,7 +27,8 @@ public class Main {
                 logger.info(result);
             }
         } catch (InterruptedException | ExecutionException e) {
-            throw new RuntimeException(String.format("Error occurred during execution: %s", e.getMessage()), e);
+            throw new RuntimeException(String.format("Error occurred during execution: %s",
+                    e.getMessage()), e);
         } finally {
             if (!executorService.isShutdown()) {
                 executorService.shutdown();
