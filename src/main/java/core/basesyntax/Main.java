@@ -22,7 +22,7 @@ public class Main {
                 futures.add(executor.submit(task));
             }
 
-            for(Future<String> future : futures) {
+            for (Future<String> future : futures) {
                 logger.info(future.get());
             }
         } catch (ExecutionException | InterruptedException e) {
