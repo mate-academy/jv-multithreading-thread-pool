@@ -17,19 +17,19 @@ public class Main {
         List<Future<String>> futures = new ArrayList<>();
         ExecutorService executor = Executors.newFixedThreadPool(5);
 
-            Callable<String> callable = new MyThread();
-            for (int i = 0; i < 20; i++) {
-                futures.add(executor.submit(callable));
+        Callable<String> callable = new MyThread();
+        for (int i = 0; i < 20; i++) {
+            futures.add(executor.submit(callable));
         }
         executor.shutdown();
 
-            for (Future<String> future : futures) {
-                try {
-                    String s = future.get();
-                    logger.info(s);
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
+        for (Future<String> future : futures) {
+            try {
+                String s = future.get();
+                logger.info(s);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
+        }
     }
 }
