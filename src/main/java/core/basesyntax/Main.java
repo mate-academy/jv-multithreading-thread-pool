@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(5);
-        List<Future<String>> futures = new ArrayList<>();
+        List<Future<String>> futures = new ArrayList<>();//
 
         for (int i = 0; i < 20; i++) {
             futures.add(executor.submit(new MyThread()));
