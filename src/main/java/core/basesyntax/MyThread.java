@@ -1,11 +1,17 @@
 package core.basesyntax;
 
+import java.time.LocalTime;
 import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
     @Override
     public String call() throws InterruptedException {
-        // write your code here
-        return null;
+        LocalTime time = LocalTime.now();
+        Thread.sleep(200);
+
+        return String.format("Task duration was %s ms, execution finished at %s",
+                String.valueOf(Math.abs(time.getNano()
+                        - LocalTime.now().getNano())).substring(0, 4),
+                LocalTime.now().toString().substring(0, 13));
     }
 }
