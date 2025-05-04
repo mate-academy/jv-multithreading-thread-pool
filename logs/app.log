@@ -1,0 +1,23 @@
+C:\Users\ROG\.jdks\openjdk-16.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\lib\idea_rt.jar=64066:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\ROG\IdeaProjects\jv-multithreading-thread-pool\target\classes;C:\Users\ROG\.m2\repository\org\apache\logging\log4j\log4j-core\2.14.1\log4j-core-2.14.1.jar;C:\Users\ROG\.m2\repository\org\apache\logging\log4j\log4j-api\2.14.1\log4j-api-2.14.1.jar core.basesyntax.Main
+INFO  core.basesyntax.Main:22 - Task duration was 182 ms, execution finished at 2021-10-13T13:36:06.274698400
+INFO  core.basesyntax.Main:22 - Task duration was 107 ms, execution finished at 2021-10-13T13:36:06.275695700
+INFO  core.basesyntax.Main:22 - Task duration was 142 ms, execution finished at 2021-10-13T13:36:06.274698400
+INFO  core.basesyntax.Main:22 - Task duration was 223 ms, execution finished at 2021-10-13T13:36:06.274698400
+INFO  core.basesyntax.Main:22 - Task duration was 202 ms, execution finished at 2021-10-13T13:36:06.274698400
+INFO  core.basesyntax.Main:22 - Task duration was 156 ms, execution finished at 2021-10-13T13:36:06.278688300
+INFO  core.basesyntax.Main:22 - Task duration was 352 ms, execution finished at 2021-10-13T13:36:06.278688300
+INFO  core.basesyntax.Main:22 - Task duration was 242 ms, execution finished at 2021-10-13T13:36:06.279684900
+INFO  core.basesyntax.Main:22 - Task duration was 97 ms, execution finished at 2021-10-13T13:36:06.279684900
+INFO  core.basesyntax.Main:22 - Task duration was 313 ms, execution finished at 2021-10-13T13:36:06.279684900
+INFO  core.basesyntax.Main:22 - Task duration was 397 ms, execution finished at 2021-10-13T13:36:06.279684900
+INFO  core.basesyntax.Main:22 - Task duration was 171 ms, execution finished at 2021-10-13T13:36:06.280682900
+INFO  core.basesyntax.Main:22 - Task duration was 296 ms, execution finished at 2021-10-13T13:36:06.280682900
+INFO  core.basesyntax.Main:22 - Task duration was 58 ms, execution finished at 2021-10-13T13:36:06.280682900
+INFO  core.basesyntax.Main:22 - Task duration was 202 ms, execution finished at 2021-10-13T13:36:06.280682900
+INFO  core.basesyntax.Main:22 - Task duration was 153 ms, execution finished at 2021-10-13T13:36:06.280682900
+INFO  core.basesyntax.Main:22 - Task duration was 237 ms, execution finished at 2021-10-13T13:36:06.280682900
+INFO  core.basesyntax.Main:22 - Task duration was 106 ms, execution finished at 2021-10-13T13:36:06.281680
+INFO  core.basesyntax.Main:22 - Task duration was 255 ms, execution finished at 2021-10-13T13:36:06.281680
+INFO  core.basesyntax.Main:22 - Task duration was 448 ms, execution finished at 2021-10-13T13:36:06.281680
+
+Process finished with exit code 0
