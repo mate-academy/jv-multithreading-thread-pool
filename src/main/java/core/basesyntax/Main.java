@@ -14,14 +14,14 @@ public class Main {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         List<Future<String>> futures = new ArrayList<>();
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
-        for (int i = 0; i < 20; i++) {
-            Future<String> future = executorService.submit(new MyThread());
-            futures.add(future);
+        try (ExecutorService executorService = Executors.newFixedThreadPool(5)) {
+            for (int i = 0; i < 20; i++) {
+                Future<String> future = executorService.submit(new MyThread());
+                futures.add(future);
+            }
         }
         for (Future<String> string : futures) {
             logger.info(string.get());
         }
-        executorService.shutdown();
     }
 }
