@@ -2,8 +2,8 @@ package core.basesyntax;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.Callable;
 import java.util.Random;
+import java.util.concurrent.Callable;
 
 public class MyThread implements Callable<String> {
     private static final Random random = new Random();
