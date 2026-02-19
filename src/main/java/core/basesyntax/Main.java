@@ -23,7 +23,8 @@ public class Main {
             Callable<String> task = () -> {
                 int sleepTime = ThreadLocalRandom.current().nextInt(100, 501);
                 Thread.sleep(sleepTime);
-                return "Task duration was " + sleepTime + " ms, execution finished at " + LocalTime.now();
+                return "Task duration was " + sleepTime
+                        + " ms, execution finished at " + LocalTime.now();
             };
             tasks.add(task);
         }
