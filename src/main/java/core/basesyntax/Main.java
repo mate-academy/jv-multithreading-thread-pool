@@ -26,7 +26,9 @@ public class Main {
             try {
                 logger.info(future.get());
             } catch (InterruptedException | ExecutionException ie) {
-                System.out.println("Something went wrong while executing thread: \n" + ie.getMessage());
+                System.out.println("Something went wrong while executing thread: \n"
+                        + ie.getMessage()
+                );
             }
         }
 
