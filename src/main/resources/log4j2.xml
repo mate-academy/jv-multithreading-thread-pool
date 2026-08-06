@@ -4,7 +4,7 @@
         <Console name="LogToConsole" target="SYSTEM_OUT">
             <PatternLayout pattern="%-5level %c:%L - %msg%n"/>
         </Console>
-        <File name="LogToFile" filename="logs/app.log" append="false">
+        <File name="LogToFile" filename="src/main/java/logs/app.log" append="false">
             <PatternLayout><Pattern>%p %c:%L %m%n</Pattern></PatternLayout>
         </File>
     </Appenders>
