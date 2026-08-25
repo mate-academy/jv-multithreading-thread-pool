@@ -1,4 +1,4 @@
-# Thread pool
+ # Thread pool
 
 Create in `main()` method an `ExecutorService` instance with a fixed-sized thread pool for 5 threads.
 Then add 20 threads of type `MyThread` to your `ExecutorService`. 
